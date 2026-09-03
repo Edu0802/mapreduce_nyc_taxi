@@ -2,14 +2,14 @@
 
 Este repositório contém a implementação prática do paradigma **MapReduce** aplicada a uma base de dados com 1.000.000 de registros de viagens de táxis de Nova York (`nyc_tripdata_2024_sample_1M.csv`).
 
-## 📌 Arquivos do Projeto
+## Arquivos do Projeto
 
 * `Trabalho_MapReduce_Eduardo_2412120032.ipynb`: Notebook Jupyter contendo a análise exploratória (EDA) e o fluxo de execução sequencial de todas as questões.
 * `mapper_1.py` até `reducer_6.py`: Scripts modulares em Python contendo a lógica de processamento em três fases (`mapper`, `combiner` e `reducer`) para cada uma das 6 questões.
 
 ---
 
-## ⚙️ Paradigma e Metodologia
+## Paradigma e Metodologia
 
 O fluxo MapReduce foi implementado utilizando **Python Puro**, respeitando o pipeline de processamento distribuído/em lote:
 1. **Mapper (`mapper_X.py`)**: Leitura sequencial das linhas, extração e filtragem dos campos necessários e emissão de pares `chave\tvalor`.
@@ -18,7 +18,7 @@ O fluxo MapReduce foi implementado utilizando **Python Puro**, respeitando o pip
 
 ---
 
-## 📊 Resultados das Questões Práticas
+## Resultados das Questões Práticas
 
 ### Questão 1: Quantidade de Viagens por Tipo de Pagamento
 * **Credit card**: 743.405 viagens
@@ -51,7 +51,7 @@ O fluxo MapReduce foi implementado utilizando **Python Puro**, respeitando o pip
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 Para rodar a sequência de qualquer questão via terminal no Google Colab ou ambiente local:
 
