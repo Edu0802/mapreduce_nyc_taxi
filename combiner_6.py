@@ -1,0 +1,25 @@
+from collections import defaultdict
+
+def shuffle(nome_arquivo_entrada, nome_arquivo_saida):
+    grupos = defaultdict(list)
+
+    entrada = open(nome_arquivo_entrada, 'r', encoding='utf-8')
+
+    for linha in entrada:
+        if '\t' not in linha:
+            continue
+
+        chave, valor = linha.strip().split('\t')
+        try:
+            grupos[chave].append(float(valor))
+        except ValueError:
+            continue
+
+    entrada.close()
+
+    saida = open(nome_arquivo_saida, 'w', encoding='utf-8')
+    saida.write(str(dict(grupos)))
+    saida.close()
+
+if __name__ == "__main__":
+    shuffle("saida_mapper_q6.txt", "saida_shuffle_q6.txt")
